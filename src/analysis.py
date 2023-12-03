@@ -11,7 +11,7 @@ if __name__ == "__main__":
     champion_prompt = ""
     champion_accuracy = 0
 
-    while generation_iteration < 10:
+    while generation_iteration < 11:
 
         generation = {
             'Name': f'Generation {generation_iteration}',

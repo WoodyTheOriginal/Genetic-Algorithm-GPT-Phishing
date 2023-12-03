@@ -16,19 +16,12 @@ Be as detailed as possible in your prompt.
 Answer in a JSON format with one key 'prompt' and the value is the prompt you improved.
 """
 API_KEYS = [
-    "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",
-    "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",
-    "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",
-    "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",
-    "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",
-    "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",
-    "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",
-    "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",
-    "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",
-    "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"
+    "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",
+    "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",
+    "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"
 ]
 
 GENERATION_COLLECTION = get_mongo_db_collection("generation")
 CHAMPION_COLLECTION = get_mongo_db_collection("champion")
-ITERATIONS = 100
+ITERATIONS = 200
 SLEEP_TIME = 5

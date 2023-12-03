@@ -44,8 +44,7 @@ def get_champion(generation_collection):
 
 def get_last_generation_champion(choice: str):
     champion_collection = get_mongo_db_collection("champion")
-    last_champion = champion_collection.find().sort({"_id": -1}).limit(1)
     try:
-        return last_champion[choice]
+        return champion_collection.find().sort({"_id": -1}).skip(1).limit(1)[choice]
     except:
         return 0
