@@ -1,5 +1,5 @@
 API_KEYS = [
-    "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",
-    "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",
-    "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",
+    "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",
+    "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",
+    "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",
 ]

@@ -1,5 +1,5 @@
 from children_class import Children
-from configuration import API_KEYS
+from secrets_things import API_KEYS
 from openai_queries import experiment, improve_preprompt
 
 def initialize_and_start_threads(data_list, prompt, iterations, sleep_time):
