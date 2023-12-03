@@ -15,11 +15,6 @@ You're given a prompt that is not working well. Improve it.
 Be as detailed as possible in your prompt.
 Answer in a JSON format with one key 'prompt' and the value is the prompt you improved.
 """
-API_KEYS = [
-    "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",
-    "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",
-    "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"
-]
 
 GENERATION_COLLECTION = get_mongo_db_collection("generation")
 CHAMPION_COLLECTION = get_mongo_db_collection("champion")
