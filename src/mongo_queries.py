@@ -43,8 +43,12 @@ def get_champion(generation_collection):
     return [generation_collection['Children']['prompts'][accuracy_and_false_negatives.index(lowest_tuple)], generation_collection['Children']['results'][accuracy_and_false_negatives.index(lowest_tuple)]]
 
 def get_last_generation_champion(choice: str):
-    champion_collection = get_mongo_db_collection("champion")
-    try:
-        return champion_collection.find().sort({"_id": -1}).skip(1).limit(1)[choice]
-    except:
-        return 0
+    champion_collection = get_mongo_db_collection("champion_2")
+    nb_champions = champion_collection.count_documents({})
+    match nb_champions:
+        case 0:
+            return 0
+        case 1:
+            return next(champion_collection.find().sort({"_id": -1}).limit(1))[choice]
+        case _:
+            return next(champion_collection.find().sort({"_id": -1}).skip(1).limit(1))[choice]

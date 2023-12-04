@@ -48,8 +48,8 @@ if __name__ == "__main__":
         document_id = insert_document(GENERATION_COLLECTION, generation)
 
         champion = get_champion(generation)
-        print(f'Champion: {champion}')
         champion_prompt = champion[0]
+        print(f'Champion prompt is : {champion_prompt}')
         champion_accuracy_and_false_negatives = [champion[1]["Accuracy"], champion[1]["False Negatives"]]
         champion_mongo_format = {
             "Name": f"Generation {generation_iteration}",

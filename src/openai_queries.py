@@ -87,7 +87,7 @@ def improve_preprompt(api_key: str, prompt: str):
             ],
         )
         
-        return (f'{PREPROMPT_SENTENCE_TO_INPUT} {loads(response.choices[0].message.content)["prompt"]}')
+        return (f'{loads(response.choices[0].message.content)["prompt"]} {PREPROMPT_SENTENCE_TO_INPUT}')
     
     except ConnectionError as e:
         print(e)
