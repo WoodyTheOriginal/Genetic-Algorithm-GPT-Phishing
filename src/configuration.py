@@ -1,5 +1,3 @@
-from mongo_queries import get_mongo_db_collection
-
 JSON_FILENAME = "phishing_email.json"
 PREPROMPT = """
 You're a phishing email detecting tool than is designed and built to detect phishing emails. 
@@ -10,15 +8,17 @@ Your ouput must be in a JSON format with one key 'status' and the value is eithe
 """
 PREPROMPT_IMPROVE = """
 You are a prompt engineer trying to build a prompt that will help GPT model detect phishing emails.
-You're given a prompt that is not working well. Improve it.
+You are given a prompt.
+You will output a new prompt that stays on the same scope of detecting phishing emails.
 GPT model will be given only the email body.
-Try to expand the prompt but stay on the same scope.
 Be as detailed as possible in your prompt.
+Be very creative and use as much knowledge as you can.
 Don't input a sample email body.
-Answer in a JSON format with one key 'prompt' and the value is the prompt you improved.
+Answer in a JSON format with one key 'prompt' and the value is the new prompt you just created.
 """
 
-GENERATION_COLLECTION = get_mongo_db_collection("generation_2")
-CHAMPION_COLLECTION = get_mongo_db_collection("champion_2")
-ITERATIONS = 200
+GENERATION_COLLECTION = "generation_3"
+CHAMPION_COLLECTION = "champion_3"
+ITERATIONS = 1
 SLEEP_TIME = 5
+LAMBDA_ = 0.4
