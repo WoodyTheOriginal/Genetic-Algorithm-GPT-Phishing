@@ -2,24 +2,10 @@ from openai import OpenAI
 from json import loads
 
 # local imports
-from secrets import OPENAI_API_KEY
+from configuration import PREPROMPT_CONTEXTUALIZATION
+from secret_stuff import API_KEYS
 
-PREPROMPT = """
-You’re given a JSON Object which contains an email body and a status about wether this
-is a phishing email or not. You now have to explain why this status is like that.
-
-Please structure your response in the following JSON format:
-{
-    "hasUnusualSyntax": [true/false],
-    "mentionsSeniorRelatives": [true/false],
-    "unusualVocativeUsage": [true/false],
-    "unusualContextualUsage": [true/false],
-    "languageComplexity": "[Low/Moderate/High]",
-    "senderReputation": "[Known/Unknown]",
-    "description": <a few sentences to explain the verdict according to the metrics above>
-}
-so here is the object :
-"""
+OPENAI_API_KEY = API_KEYS[0]
 
 
 def get_context(item: dict) -> dict:

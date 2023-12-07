@@ -1,6 +1,8 @@
 from json import load, dumps
 
 # local imports
+from functions import initialize_and_start_threads, calculate_score
+from contextualization import get_context
 from mongo_queries import (
     get_all_previous_generations_champion,
     get_max_false_negatives_in_champions,
@@ -10,15 +12,13 @@ from mongo_queries import (
     get_champion,
 )
 from configuration import (
-    JSON_FILENAME,
-    PREPROMPT,
     GENERATION_COLLECTION,
     CHAMPION_COLLECTION,
+    JSON_FILENAME,
     ITERATIONS,
     SLEEP_TIME,
+    PREPROMPT,
 )
-from functions import initialize_and_start_threads, calculate_score
-from contextualization import get_context
 
 
 if __name__ == "__main__":
