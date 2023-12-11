@@ -38,7 +38,7 @@ def experiment(data_list: str, api_key: str, preprompt: str, iterations: int, sl
     false_negatives = 0
 
     for i in range(iterations):
-        #print(f"iteration {i+1}")
+        print(f"iteration {i+1}")
 
         email_body = data_list[i]["content"]
         response = get_gpt_opinion(api_key, preprompt, email_body)

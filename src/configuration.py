@@ -16,9 +16,29 @@ Be very creative and use as much knowledge as you can.
 Don't input a sample email body.
 Answer in a JSON format with one key 'prompt' and the value is the new prompt you just created.
 """
+PREPROMPT_P0 = """
+You're a phishing email detecting tool than is designed and built to detect phishing emails. 
+Use as much knowloedge as you can to deliver the correct output.
+Your ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.
+"""
+PREPROMPT_SEM = """
+"""
+PREPROMPT_PSY = """
+"""
+PREPROMPT_CONTXT = """
+"""
+
+CHAMPION_COLLECTIONS = ["champion", "champion_2", "champion_3"]
 
 GENERATION_COLLECTION = "generation_3"
 CHAMPION_COLLECTION = "champion_3"
-ITERATIONS = 1
+ITERATIONS = 200
 SLEEP_TIME = 5
 LAMBDA_ = 0.4
+TEST_FILES_LIST = [
+    "datasets/sampled_emails_1.json",
+    "datasets/sampled_emails_2.json",
+    "datasets/sampled_emails_3.json",
+    "datasets/sampled_emails_4.json",
+    "datasets/sampled_emails_5.json",
+]

@@ -29,11 +29,12 @@ if __name__ == "__main__":
         Y_max = get_max_false_negatives_in_champions()
 
         all_last_champions = get_all_previous_generations_champion(CHAMPION_COLLECTION)
-        champion_from_all_last_champions = get_champion_from_champions(all_last_champions)
+        if all_last_champions != []:
+            champion_from_all_last_champions = get_champion_from_champions(all_last_champions)
 
-        champion_from_all_last_champions_prompt = champion_from_all_last_champions["prompt"]
-        champion_from_all_last_champions_accuracy_and_false_negatives = [champion_from_all_last_champions["Accuracy"], champion_from_all_last_champions["False Negatives"]]
-        champion_from_all_last_champions_score = calculate_score(champion_from_all_last_champions_accuracy_and_false_negatives[0], champion_from_all_last_champions_accuracy_and_false_negatives[1], Y_max)
+            champion_from_all_last_champions_prompt = champion_from_all_last_champions["prompt"]
+            champion_from_all_last_champions_accuracy_and_false_negatives = [champion_from_all_last_champions["Accuracy"], champion_from_all_last_champions["False Negatives"]]
+            champion_from_all_last_champions_score = calculate_score(champion_from_all_last_champions_accuracy_and_false_negatives[0], champion_from_all_last_champions_accuracy_and_false_negatives[1], Y_max)
 
         if generation_iteration == 1:
 

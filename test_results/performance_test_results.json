@@ -1,0 +1,60 @@
+{
+    "prompt": "\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "sampled_emails_1.json",
+            {
+                "Accuracy": 0.785,
+                "Error": 0.21499999999999997,
+                "True Positives": 59,
+                "True Negatives": 98,
+                "False Positives": 43,
+                "False Negatives": 0
+            }
+        ],
+        [
+            "sampled_emails_2.json",
+            {
+                "Accuracy": 0.76,
+                "Error": 0.24,
+                "True Positives": 88,
+                "True Negatives": 64,
+                "False Positives": 45,
+                "False Negatives": 3
+            }
+        ],
+        [
+            "sampled_emails_3.json",
+            {
+                "Accuracy": 0.78,
+                "Error": 0.21999999999999997,
+                "True Positives": 85,
+                "True Negatives": 71,
+                "False Positives": 43,
+                "False Negatives": 1
+            }
+        ],
+        [
+            "sampled_emails_4.json",
+            {
+                "Accuracy": 0.7788944723618091,
+                "Error": 0.2211055276381909,
+                "True Positives": 76,
+                "True Negatives": 79,
+                "False Positives": 40,
+                "False Negatives": 4
+            }
+        ],
+        [
+            "sampled_emails_5.json",
+            {
+                "Accuracy": 0.725,
+                "Error": 0.275,
+                "True Positives": 78,
+                "True Negatives": 67,
+                "False Positives": 53,
+                "False Negatives": 2
+            }
+        ]
+    ]
+}

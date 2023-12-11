@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from configuration import CHAMPION_COLLECTION
+from configuration import CHAMPION_COLLECTION, CHAMPION_COLLECTIONS
 
 def get_mongo_db_collection(collection_name: str):
     # Connect to the MongoDB server (default is localhost on port 27017)
@@ -92,3 +92,14 @@ def get_max_false_negatives_in_champions():
     result = collection.find().sort("False Negatives", -1).limit(1)
     for document in result:
         return document['False Negatives']
+    
+def get_best_champions_prompts_from_all_champions_documents():
+    client = MongoClient('localhost', 27017)
+    db = client['master_ki']
+    champions_prompts = []
+
+    for index, keys in enumerate(CHAMPION_COLLECTIONS):
+        collection = db[keys]
+        result = get_champion_from_champions(list(collection.find()))["prompt"]
+        champions_prompts.append(result)
+    return champions_prompts
