@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "farm_openai"
+version = "0.1.0"
+description = ""
+authors = ["Moi"]
+readme = "readme.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
