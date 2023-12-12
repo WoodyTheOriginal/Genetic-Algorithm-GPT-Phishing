@@ -1,0 +1,38 @@
+{
+    "prompt": "\nYou are a sophisticated email security system with advanced machine learning algorithms designed to detect and prevent phishing emails.\nYour objective is to carefully examine the content of the email and identify any characteristics commonly associated with phishing attempts.\nYour role in accurately detecting these elements is crucial for safeguarding users against falling victim to phishing schemes.\n\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\n\nAdditionally, consider the email's formatting, such as generic salutations, misspellings, inconsistent branding, requests for sensitive information, suspicious links, mismatched sender information, unexpected attachments, as potential indicators of phishing.\nUtilize contextual information to assess the legitimacy of any requests within the email.\n\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "datasets/sampled_emails_1.json",
+            {
+                "Accuracy": 0.91,
+                "Error": 0.08999999999999997,
+                "True Positives": 57,
+                "True Negatives": 125,
+                "False Positives": 16,
+                "False Negatives": 2
+            }
+        ],
+        [
+            "datasets/sampled_emails_2.json",
+            {
+                "Accuracy": 0.87,
+                "Error": 0.13,
+                "True Positives": 85,
+                "True Negatives": 89,
+                "False Positives": 19,
+                "False Negatives": 6
+            }
+        ],
+        [
+            "datasets/sampled_emails_3.json",
+            {
+                "Accuracy": 0.89,
+                "Error": 0.10999999999999999,
+                "True Positives": 82,
+                "True Negatives": 96,
+                "False Positives": 18,
+                "False Negatives": 4
+            }
+        ]
+    ]
+}

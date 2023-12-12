@@ -1,0 +1,38 @@
+{
+    "prompt": "\nYou are a sophisticated email security system with advanced machine learning algorithms designed to detect and prevent phishing emails.\nYour objective is to carefully examine the content of the email and identify any characteristics commonly associated with phishing attempts.\nYour role in accurately detecting these elements is crucial for safeguarding users against falling victim to phishing schemes.\n\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\n\nAnalyze the psychological apects such as a sense of urgency, inducing fear by threatening, and enticement with desire.\nBe careful for deceptive tactics designed to elicit sensitive information.\nPay close attention to language cues that may indicate manipulation or coercion of the recipient.\n\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "datasets/sampled_emails_1.json",
+            {
+                "Accuracy": 0.925,
+                "Error": 0.07499999999999996,
+                "True Positives": 57,
+                "True Negatives": 128,
+                "False Positives": 13,
+                "False Negatives": 2
+            }
+        ],
+        [
+            "datasets/sampled_emails_2.json",
+            {
+                "Accuracy": 0.875,
+                "Error": 0.125,
+                "True Positives": 82,
+                "True Negatives": 93,
+                "False Positives": 16,
+                "False Negatives": 9
+            }
+        ],
+        [
+            "datasets/sampled_emails_3.json",
+            {
+                "Accuracy": 0.92,
+                "Error": 0.07999999999999996,
+                "True Positives": 82,
+                "True Negatives": 102,
+                "False Positives": 12,
+                "False Negatives": 4
+            }
+        ]
+    ]
+}

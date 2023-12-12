@@ -1,0 +1,38 @@
+{
+    "prompt": "\nYou are a sophisticated email security system with advanced machine learning algorithms designed to detect and prevent phishing emails.\nYour objective is to carefully examine the content of the email and identify any characteristics commonly associated with phishing attempts.\nYour role in accurately detecting these elements is crucial for safeguarding users against falling victim to phishing schemes.\n\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\n\nAdditionally, consider the email's formatting, such as generic salutations, misspellings, inconsistent branding, requests for sensitive information, suspicious links, mismatched sender information, unexpected attachments, as potential indicators of phishing.\nUtilize contextual information to assess the legitimacy of any requests within the email.\n\nAnalyze the psychological apects such as a sense of urgency, inducing fear by threatening, and enticement with desire.\nBe careful for deceptive tactics designed to elicit sensitive information.\nPay close attention to language cues that may indicate manipulation or coercion of the recipient.\n\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "datasets/sampled_emails_1.json",
+            {
+                "Accuracy": 0.895,
+                "Error": 0.10499999999999998,
+                "True Positives": 56,
+                "True Negatives": 123,
+                "False Positives": 18,
+                "False Negatives": 3
+            }
+        ],
+        [
+            "datasets/sampled_emails_2.json",
+            {
+                "Accuracy": 0.88,
+                "Error": 0.12,
+                "True Positives": 85,
+                "True Negatives": 91,
+                "False Positives": 17,
+                "False Negatives": 6
+            }
+        ],
+        [
+            "datasets/sampled_emails_3.json",
+            {
+                "Accuracy": 0.885,
+                "Error": 0.11499999999999999,
+                "True Positives": 82,
+                "True Negatives": 95,
+                "False Positives": 19,
+                "False Negatives": 4
+            }
+        ]
+    ]
+}

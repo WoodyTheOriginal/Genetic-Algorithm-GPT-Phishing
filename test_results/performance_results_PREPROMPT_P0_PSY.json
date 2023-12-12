@@ -1,0 +1,38 @@
+{
+    "prompt": "\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\n\nAnalyze the psychological apects such as a sense of urgency, inducing fear by threatening, and enticement with desire.\nBe careful for deceptive tactics designed to elicit sensitive information.\nPay close attention to language cues that may indicate manipulation or coercion of the recipient.\n\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "datasets/sampled_emails_1.json",
+            {
+                "Accuracy": 0.905,
+                "Error": 0.09499999999999997,
+                "True Positives": 58,
+                "True Negatives": 123,
+                "False Positives": 18,
+                "False Negatives": 1
+            }
+        ],
+        [
+            "datasets/sampled_emails_2.json",
+            {
+                "Accuracy": 0.84,
+                "Error": 0.16000000000000003,
+                "True Positives": 82,
+                "True Negatives": 86,
+                "False Positives": 23,
+                "False Negatives": 9
+            }
+        ],
+        [
+            "datasets/sampled_emails_3.json",
+            {
+                "Accuracy": 0.87,
+                "Error": 0.13,
+                "True Positives": 83,
+                "True Negatives": 91,
+                "False Positives": 23,
+                "False Negatives": 3
+            }
+        ]
+    ]
+}

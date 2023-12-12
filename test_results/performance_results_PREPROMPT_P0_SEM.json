@@ -1,0 +1,38 @@
+{
+    "prompt": "\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\n\nAdditionally, consider the email's formatting, such as generic salutations, misspellings, inconsistent branding, requests for sensitive information, suspicious links, mismatched sender information, unexpected attachments, as potential indicators of phishing.\nUtilize contextual information to assess the legitimacy of any requests within the email.\n\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "datasets/sampled_emails_1.json",
+            {
+                "Accuracy": 0.81,
+                "Error": 0.18999999999999995,
+                "True Positives": 57,
+                "True Negatives": 105,
+                "False Positives": 36,
+                "False Negatives": 2
+            }
+        ],
+        [
+            "datasets/sampled_emails_2.json",
+            {
+                "Accuracy": 0.815,
+                "Error": 0.18500000000000005,
+                "True Positives": 87,
+                "True Negatives": 76,
+                "False Positives": 33,
+                "False Negatives": 4
+            }
+        ],
+        [
+            "datasets/sampled_emails_3.json",
+            {
+                "Accuracy": 0.84,
+                "Error": 0.16000000000000003,
+                "True Positives": 84,
+                "True Negatives": 84,
+                "False Positives": 30,
+                "False Negatives": 2
+            }
+        ]
+    ]
+}

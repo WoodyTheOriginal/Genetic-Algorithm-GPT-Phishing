@@ -1,0 +1,38 @@
+{
+    "prompt": "\nYou are a sophisticated email security system with advanced machine learning algorithms designed to detect and prevent phishing emails.\nYour objective is to carefully examine the content of the email and identify any characteristics commonly associated with phishing attempts.\nYour role in accurately detecting these elements is crucial for safeguarding users against falling victim to phishing schemes.\n\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\n\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "datasets/sampled_emails_1.json",
+            {
+                "Accuracy": 0.9,
+                "Error": 0.09999999999999998,
+                "True Positives": 59,
+                "True Negatives": 121,
+                "False Positives": 20,
+                "False Negatives": 0
+            }
+        ],
+        [
+            "datasets/sampled_emails_2.json",
+            {
+                "Accuracy": 0.885,
+                "Error": 0.11499999999999999,
+                "True Positives": 86,
+                "True Negatives": 91,
+                "False Positives": 18,
+                "False Negatives": 5
+            }
+        ],
+        [
+            "datasets/sampled_emails_3.json",
+            {
+                "Accuracy": 0.875,
+                "Error": 0.125,
+                "True Positives": 84,
+                "True Negatives": 91,
+                "False Positives": 23,
+                "False Negatives": 2
+            }
+        ]
+    ]
+}

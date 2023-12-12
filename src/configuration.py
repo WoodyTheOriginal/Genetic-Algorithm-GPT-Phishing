@@ -19,13 +19,20 @@ Answer in a JSON format with one key 'prompt' and the value is the new prompt yo
 PREPROMPT_P0 = """
 You're a phishing email detecting tool than is designed and built to detect phishing emails. 
 Use as much knowloedge as you can to deliver the correct output.
-Your ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.
 """
 PREPROMPT_SEM = """
+Additionally, consider the email's formatting, such as generic salutations, misspellings, inconsistent branding, requests for sensitive information, suspicious links, mismatched sender information, unexpected attachments, as potential indicators of phishing.
+Utilize contextual information to assess the legitimacy of any requests within the email.
 """
 PREPROMPT_PSY = """
+Analyze the psychological apects such as a sense of urgency, inducing fear by threatening, and enticement with desire.
+Be careful for deceptive tactics designed to elicit sensitive information.
+Pay close attention to language cues that may indicate manipulation or coercion of the recipient.
 """
 PREPROMPT_CONTXT = """
+You are a sophisticated email security system with advanced machine learning algorithms designed to detect and prevent phishing emails.
+Your objective is to carefully examine the content of the email and identify any characteristics commonly associated with phishing attempts.
+Your role in accurately detecting these elements is crucial for safeguarding users against falling victim to phishing schemes.
 """
 
 CHAMPION_COLLECTIONS = ["champion", "champion_2", "champion_3"]
@@ -39,6 +46,6 @@ TEST_FILES_LIST = [
     "datasets/sampled_emails_1.json",
     "datasets/sampled_emails_2.json",
     "datasets/sampled_emails_3.json",
-    "datasets/sampled_emails_4.json",
-    "datasets/sampled_emails_5.json",
+    #"datasets/sampled_emails_4.json",
+    #"datasets/sampled_emails_5.json",
 ]

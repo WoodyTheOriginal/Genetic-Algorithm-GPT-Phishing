@@ -2,5 +2,5 @@ src/__pycache__/
 src/secret_stuff.py
 src/filtering.py
 src/check_dataset.py
-test_results/beta_tests/
+test_results/
 datasets/old_random/

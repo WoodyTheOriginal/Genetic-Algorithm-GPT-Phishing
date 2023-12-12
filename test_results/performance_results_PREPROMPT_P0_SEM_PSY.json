@@ -1,0 +1,38 @@
+{
+    "prompt": "\nYou're a phishing email detecting tool than is designed and built to detect phishing emails. \nUse as much knowloedge as you can to deliver the correct output.\n\nAdditionally, consider the email's formatting, such as generic salutations, misspellings, inconsistent branding, requests for sensitive information, suspicious links, mismatched sender information, unexpected attachments, as potential indicators of phishing.\nUtilize contextual information to assess the legitimacy of any requests within the email.\n\nAnalyze the psychological apects such as a sense of urgency, inducing fear by threatening, and enticement with desire.\nBe careful for deceptive tactics designed to elicit sensitive information.\nPay close attention to language cues that may indicate manipulation or coercion of the recipient.\n\nYour ouput must be in a JSON format with one key 'status' and the value is either 'Safe Email' or 'Phishing Email'.\n",
+    "results": [
+        [
+            "datasets/sampled_emails_1.json",
+            {
+                "Accuracy": 0.885,
+                "Error": 0.11499999999999999,
+                "True Positives": 58,
+                "True Negatives": 119,
+                "False Positives": 22,
+                "False Negatives": 1
+            }
+        ],
+        [
+            "datasets/sampled_emails_2.json",
+            {
+                "Accuracy": 0.85,
+                "Error": 0.15000000000000002,
+                "True Positives": 85,
+                "True Negatives": 85,
+                "False Positives": 24,
+                "False Negatives": 6
+            }
+        ],
+        [
+            "datasets/sampled_emails_3.json",
+            {
+                "Accuracy": 0.855,
+                "Error": 0.14500000000000002,
+                "True Positives": 84,
+                "True Negatives": 87,
+                "False Positives": 27,
+                "False Negatives": 2
+            }
+        ]
+    ]
+}
